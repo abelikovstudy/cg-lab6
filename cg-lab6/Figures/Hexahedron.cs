@@ -12,14 +12,15 @@ namespace cg_lab6.Figures
         public Polyhedron shape;
         public Hexahedron() 
         {
-            Dot a = new Dot(0, 0, 0);
-            Dot b = new Dot(100, 0, 0);
-            Dot c = new Dot(100, 100, 0);
-            Dot d = new Dot(0, 100, 0);
-            Dot e = new Dot(0, 0, 100);
-            Dot f = new Dot(0, 100, 100);
-            Dot g = new Dot(100, 100, 100);
-            Dot h = new Dot(100, 0, 100);
+
+            Dot a = new Dot(50, 50,50);
+            Dot b = new Dot(150, 50, 50);
+            Dot c = new Dot(150, 150, 50);
+            Dot d = new Dot(50, 150, 50);
+            Dot e = new Dot(50, 50, 150);
+            Dot f = new Dot(50, 150, 150);
+            Dot g = new Dot(150, 150, 150);
+            Dot h = new Dot(150, 50, 150);
             Edge ab = new Edge(a, b);
             Edge bc = new Edge(b, c);
             Edge cd = new Edge(c, d);

@@ -20,9 +20,9 @@ namespace cg_lab6.Primitives
             float x = 0, y = 0, z = 0;
             foreach (Edge e in edges)
             {
-                x += e.end.x;
-                y += e.end.y;
-                z += e.end.z;
+                x += e.start.x;
+                y += e.start.y;
+                z += e.start.z;
             }
             return new Dot(x / edges.Count, y / edges.Count, z / edges.Count);
         }

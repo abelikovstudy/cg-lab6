@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -71,7 +72,28 @@ namespace cg_lab6.MathUtils
             }
             return result;
         }
+        public static List<Dot> rotate_around_center(List<Dot> dots, Dot center,  Constants.Axis axis, double angle) 
+        {
+            List<Dot> result = new List<Dot>();
 
-        
+            MatrixUtils rotation = new MatrixUtils(4, 4, 1, 0, 0, -center.x, 0, 1, 0, -center.y, 0, 0, 1, -center.z, 0, 0, 0, 1);
+            foreach (Dot dot in dots)
+            {
+                MatrixUtils resulting = rotation * new MatrixUtils(4, 1, dot.x, dot.y, dot.z, 1);
+                result.Add(new Dot((float)resulting.matrix[0, 0], (float)resulting.matrix[1, 0], (float)resulting.matrix[2, 0]));
+            }
+
+            List<Dot> rs = rotate(result, angle, axis);
+
+            result.Clear();
+
+            rotation = new MatrixUtils(4, 4, 1, 0, 0, center.x, 0, 1, 0, center.y, 0, 0, 1, center.z, 0, 0, 0, 1);
+            foreach (Dot dot in rs)
+            {
+                MatrixUtils resulting = rotation * new MatrixUtils(4, 1, dot.x, dot.y, dot.z, 1);
+                result.Add(new Dot((float)resulting.matrix[0, 0], (float)resulting.matrix[1, 0], (float)resulting.matrix[2, 0]));
+            }
+            return result;
+        }
     }
 }

@@ -58,6 +58,10 @@
             inputScaleY = new TextBox();
             inputScaleX = new TextBox();
             label9 = new Label();
+            buttonRotateCenter = new Button();
+            inputAngleCenter = new TextBox();
+            label10 = new Label();
+            comboAxes2 = new ComboBox();
             groupBuild.SuspendLayout();
             groupProjection.SuspendLayout();
             groupRotate.SuspendLayout();
@@ -137,6 +141,10 @@
             // 
             // groupRotate
             // 
+            groupRotate.Controls.Add(buttonRotateCenter);
+            groupRotate.Controls.Add(inputAngleCenter);
+            groupRotate.Controls.Add(label10);
+            groupRotate.Controls.Add(comboAxes2);
             groupRotate.Controls.Add(buttonRotateAxes);
             groupRotate.Controls.Add(inputAngle);
             groupRotate.Controls.Add(label1);
@@ -150,7 +158,7 @@
             // 
             // buttonRotateAxes
             // 
-            buttonRotateAxes.Location = new Point(143, 18);
+            buttonRotateAxes.Location = new Point(143, 15);
             buttonRotateAxes.Name = "buttonRotateAxes";
             buttonRotateAxes.Size = new Size(75, 23);
             buttonRotateAxes.TabIndex = 3;
@@ -160,7 +168,7 @@
             // 
             // inputAngle
             // 
-            inputAngle.Location = new Point(75, 19);
+            inputAngle.Location = new Point(75, 16);
             inputAngle.Name = "inputAngle";
             inputAngle.Size = new Size(28, 23);
             inputAngle.TabIndex = 3;
@@ -168,7 +176,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 22);
+            label1.Location = new Point(6, 19);
             label1.Name = "label1";
             label1.Size = new Size(71, 15);
             label1.TabIndex = 3;
@@ -177,7 +185,7 @@
             // comboAxes
             // 
             comboAxes.FormattingEnabled = true;
-            comboAxes.Location = new Point(106, 19);
+            comboAxes.Location = new Point(106, 16);
             comboAxes.Name = "comboAxes";
             comboAxes.Size = new Size(31, 23);
             comboAxes.TabIndex = 3;
@@ -354,6 +362,42 @@
             label9.TabIndex = 4;
             label9.Text = "Масштаб на";
             // 
+            // buttonRotateCenter
+            // 
+            buttonRotateCenter.Location = new Point(229, 48);
+            buttonRotateCenter.Name = "buttonRotateCenter";
+            buttonRotateCenter.Size = new Size(75, 23);
+            buttonRotateCenter.TabIndex = 4;
+            buttonRotateCenter.Text = "Повернуть";
+            buttonRotateCenter.UseVisualStyleBackColor = true;
+            buttonRotateCenter.Click += buttonRotateCenter_Click;
+            // 
+            // inputAngleCenter
+            // 
+            inputAngleCenter.Location = new Point(158, 49);
+            inputAngleCenter.Name = "inputAngleCenter";
+            inputAngleCenter.Size = new Size(28, 23);
+            inputAngleCenter.TabIndex = 5;
+            inputAngleCenter.TextChanged += inputAngleCenter_TextChanged;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(6, 52);
+            label10.Name = "label10";
+            label10.Size = new Size(152, 15);
+            label10.TabIndex = 6;
+            label10.Text = "Поворот вокруг центра на";
+            // 
+            // comboAxes2
+            // 
+            comboAxes2.FormattingEnabled = true;
+            comboAxes2.Location = new Point(192, 48);
+            comboAxes2.Name = "comboAxes2";
+            comboAxes2.Size = new Size(31, 23);
+            comboAxes2.TabIndex = 7;
+            comboAxes2.SelectedIndexChanged += comboAxes2_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -412,5 +456,9 @@
         private TextBox inputScaleY;
         private TextBox inputScaleX;
         private Label label9;
+        private Button buttonRotateCenter;
+        private TextBox inputAngleCenter;
+        private Label label10;
+        private ComboBox comboAxes2;
     }
 }

@@ -12,12 +12,12 @@ namespace cg_lab6.Figures
         public Polyhedron shape;
         public Octahedron() 
         {
-            Dot a = new Dot(50, 50, -100);
+            Dot a = new Dot(50, 100, 50);
             Dot b = new Dot(0, 0, 0);
-            Dot e = new Dot(0, 100, 0);
-            Dot d = new Dot(100, 100, 0);
-            Dot c = new Dot(100, 0, 0);
-            Dot f = new Dot(50, 50, 100);
+            Dot e = new Dot(100, 0, 0);
+            Dot d = new Dot(100, 0, 100);
+            Dot c = new Dot(0, 0, 100);
+            Dot f = new Dot(50, -100, 50);
             Edge ab = new Edge(a, b);
             Edge ae = new Edge(a, e);
             Edge ad = new Edge(a, d);

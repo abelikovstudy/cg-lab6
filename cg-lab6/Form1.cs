@@ -28,8 +28,12 @@ namespace cg_lab6
             comboAxes.Items.Add("X");
             comboAxes.Items.Add("Y");
             comboAxes.Items.Add("Z");
+            comboAxes2.Items.Add("X");
+            comboAxes2.Items.Add("Y");
+            comboAxes2.Items.Add("Z");
 
             comboAxes.SelectedIndex = 0;
+            comboAxes2.SelectedIndex = 0;
             comboFigures.SelectedIndex = 0;
             axis = Constants.Axis.X;
             radioPerspectiveCentral.Checked = true;
@@ -40,6 +44,7 @@ namespace cg_lab6
             groupScale.Enabled = false;
 
             inputAngle.Text = "0";
+            inputAngleCenter.Text = "0";
             inputShiftX.Text = "0";
             inputShiftY.Text = "0";
             inputShiftZ.Text = "0";
@@ -60,7 +65,7 @@ namespace cg_lab6
         {
             Dot zero = new Dot(0, 0, 0);
             Dot x = new Dot(500, 0, 0);
-            Dot y = new Dot(0, 200, 0);
+            Dot y = new Dot(0, 300, 0);
             Dot z = new Dot(0, 0, 500);
             gr.DrawLine(new Pen(Color.Red), zero.getProjection(projection), x.getProjection(projection));
             gr.DrawLine(new Pen(Color.Green), zero.getProjection(projection), y.getProjection(projection));
@@ -102,8 +107,7 @@ namespace cg_lab6
                 }
             }
 
-            Dot zero = new Dot(0, 0, 0);
-            gr.DrawLine(new Pen(Color.Purple), zero.getProjection(projection), p.getCenter().getProjection(projection));
+            gr.DrawRectangle(new Pen(Color.Black), p.getCenter().getProjection(projection).X, p.getCenter().getProjection(projection).Y, 2, 2); // Центр
 
         }
 
@@ -185,7 +189,7 @@ namespace cg_lab6
 
         private void buttonScaleCoords_Click(object sender, EventArgs e)
         {
-            p.dots = AffineTransformations.scale(p.dots, double.Parse(inputScaleX.Text), double.Parse(inputScaleY.Text) , double.Parse(inputScaleZ.Text));
+            p.dots = AffineTransformations.scale(p.dots, double.Parse(inputScaleX.Text), double.Parse(inputScaleY.Text), double.Parse(inputScaleZ.Text));
             p.transform();
             gr.Clear(Color.White);
             drawAxis();
@@ -196,6 +200,29 @@ namespace cg_lab6
                     gr.DrawLine(new Pen(Color.Red), edge.start.getProjection(projection), edge.end.getProjection(projection));
                 }
             }
+        }
+
+        private void buttonRotateCenter_Click(object sender, EventArgs e)
+        {
+            p.dots = AffineTransformations.rotate_around_center(p.dots, p.getCenter(), axis, double.Parse(inputAngle.Text));
+            p.transform();
+            gr.Clear(Color.White);
+            drawAxis();
+            foreach (Polygon poly in p.polys)
+            {
+                foreach (Edge edge in poly.edges)
+                {
+                    gr.DrawLine(new Pen(Color.Red), edge.start.getProjection(projection), edge.end.getProjection(projection));
+                }
+            }
+        }
+
+        private void comboAxes2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void inputAngleCenter_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

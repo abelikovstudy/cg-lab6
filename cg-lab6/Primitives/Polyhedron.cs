@@ -40,7 +40,7 @@ namespace cg_lab6.Primitives
 
         public Dot getCenter() 
         {
-            float x = 0, y = 0, z = 0;
+            float x = 0f, y = 0f, z = 0f;
             foreach (Polygon p in polys)
             {
                 x += p.getCenter().x;
@@ -48,7 +48,7 @@ namespace cg_lab6.Primitives
                 z += p.getCenter().z;
             }
 
-            return new Dot(x / polys.Count(), y / polys.Count(), z / polys.Count());
+            return new Dot(x / polys.Count, y / polys.Count, z / polys.Count);
         }
 
 

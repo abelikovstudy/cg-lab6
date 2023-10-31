@@ -95,6 +95,22 @@ namespace cg_lab6.MathUtils
             }
             return res;
         }
+
+        public static MatrixUtils Transpose(MatrixUtils m1)
+        {
+            MatrixUtils res = new MatrixUtils(m1.n, m1.m);
+
+            for (int i = 0; i < m1.n; i++)
+            {
+                for (int j = 0; j < m1.m; j++)
+                {
+                    res.matrix[j, i] = m1.matrix[i, j];
+                }
+            }
+
+            return res;
+        }
+
         public override string ToString()
         {
             string result = "";

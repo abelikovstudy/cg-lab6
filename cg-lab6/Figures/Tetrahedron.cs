@@ -13,18 +13,23 @@ namespace cg_lab6.Figures
         public Polyhedron shape;
         public Tetrahedron()
         {
+            //Dot a = new Dot(0, 0, 0);
+            //Dot b = new Dot(100, 0, 100);
+            //Dot c = new Dot(100, 100, 0);
+            //Dot d = new Dot(0, 100, 100);
+
             Dot a = new Dot(0, 0, 0);
-            Dot b = new Dot(100, 0, 100);
-            Dot c = new Dot(100, 100, 0);
-            Dot d = new Dot(0, 100, 100);
+            Dot b = new Dot(100, 0, 0);
+            Dot c = new Dot(0, 0, 100);
+            Dot d = new Dot(0, 100, 0);
             Edge ab = new Edge(a, b);
             Edge bc = new Edge(b, c);
-            Edge ac = new Edge(a, c);
+            Edge ac = new Edge(c, a);
             Edge bd = new Edge(b, d);
             Edge ad = new Edge(a, d);
             Edge cd = new Edge(c, d);
-            Polygon abc = new Polygon(new List<Edge> { ad, bc, ac });
-            Polygon dbc = new Polygon(new List<Edge> { bd, bc, cd });
+            Polygon abc = new Polygon(new List<Edge> { ab, bc, ac });
+            Polygon dbc = new Polygon(new List<Edge> { bd, cd, bc });
             Polygon adc = new Polygon(new List<Edge> { ad, cd, ac });
             Polygon adb = new Polygon(new List<Edge> { ad, bd, ab });
             shape = new Polyhedron(new List<Polygon> { abc, dbc, adc, adb });
@@ -42,7 +47,7 @@ namespace cg_lab6.Figures
             Edge bd = new Edge(b, d);
             Edge ad = new Edge(a, d);
             Edge cd = new Edge(c, d);
-            Polygon abc = new Polygon(new List<Edge> { ad, bc, ac });
+            Polygon abc = new Polygon(new List<Edge> { ab, bc, ac });
             Polygon dbc = new Polygon(new List<Edge> { bd, bc, cd });
             Polygon adc = new Polygon(new List<Edge> { ad, cd, ac });
             Polygon adb = new Polygon(new List<Edge> { ad, bd, ab });
