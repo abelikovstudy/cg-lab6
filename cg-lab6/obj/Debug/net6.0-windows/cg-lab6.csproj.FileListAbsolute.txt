@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\cg-lab6\cg-lab6\bin\Debug\net6.0-windows\cg-lab6.exe
+C:\Users\user\source\repos\cg-lab6\cg-lab6\bin\Debug\net6.0-windows\cg-lab6.deps.json
+C:\Users\user\source\repos\cg-lab6\cg-lab6\bin\Debug\net6.0-windows\cg-lab6.runtimeconfig.json
+C:\Users\user\source\repos\cg-lab6\cg-lab6\bin\Debug\net6.0-windows\cg-lab6.dll
+C:\Users\user\source\repos\cg-lab6\cg-lab6\bin\Debug\net6.0-windows\cg-lab6.pdb
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg_lab6.Form1.resources
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.csproj.GenerateResource.cache
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.AssemblyInfo.cs
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.dll
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\refint\cg-lab6.dll
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.pdb
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\cg-lab6.genruntimeconfig.cache
+C:\Users\user\source\repos\cg-lab6\cg-lab6\obj\Debug\net6.0-windows\ref\cg-lab6.dll
